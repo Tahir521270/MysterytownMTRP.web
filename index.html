@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystery Town RP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #1c1c1c;
+            color: white;
+        }
+        .banner {
+            max-width: 100%;
+            height: auto;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: orange;
+            border: none;
+            border-radius: 5px;
+            color: black;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: darkorange;
+        }
+    </style>
+</head>
+<body>
+    <!-- الصورة الجديدة -->
+    <img src="BANNER.png" alt="Mystery Town RP Banner" class="banner">
+
+    <!-- الأزرار -->
+    <div class="button-container">
+        <button onclick="showSection('about')">تعريف السيرفر</button>
+        <button onclick="showSection('managers')">المسؤولون</button>
+        <button onclick="showSection('products')">المنتجات</button>
+        <button onclick="window.open('https://discord.gg/NC3Vh3Xd', '_blank')">Discord</button>
+    </div>
+
+    <!-- أقسام الصفحة -->
+    <div id="about" style="display: none;">
+        <h2>تعريف السيرفر</h2>
+        <p>ماهو سيرفر MYSTERY TOWN؟</p>
+        <p>سيرفر تأسس سنة 2023 شهر 5 يوم 27 بواسطة علاء ونينجا 🫡...</p>
+    </div>
+    <div id="managers" style="display: none;">
+        <h2>المسؤولون</h2>
+        <p>علاء ونينجا (المدراء العامون).</p>
+        <p>كولومبيا وطاهر (نائب المدير).</p>
+    </div>
+    <div id="products" style="display: none;">
+        <h2>المنتجات</h2>
+        <p>قريباً...</p>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('div[id]').forEach(div => div.style.display = 'none');
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
